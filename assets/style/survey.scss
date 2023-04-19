@@ -73,8 +73,16 @@
     }
 
     .survyList{
+      &-input .sruveyside{
+        &-Title{
+          &::after{
+            content: "*";
+            color: #dc3545;
+          }
+        }
+      }
       &-input label{
-        width: 25%;
+        width: 30%;
 
         + input{
           width: 70%;
