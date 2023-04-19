@@ -108,6 +108,11 @@
   width: 35%;
 }
 
+.inputflexStyle {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .surveyGrid {
     &-container {

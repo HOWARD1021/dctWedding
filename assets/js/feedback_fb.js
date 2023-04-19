@@ -20,3 +20,4 @@ function more(id) {
     $('#'+id).css({'height': 136, 'max-height': 'none'}).animate({'height': fullHeight}, 300);
   }
 }
+

@@ -172,15 +172,41 @@ submitBtn.addEventListener("click", processFormData);
          let mustCheck_params = {
             "UserName": UserName,
             "UserEmail": UserEmail,
+            "Line":UserLine,
             "UserPhone": UserPhone,
             "Date": Date,
             "Scenes":Scenes,
             "Attendance":Attendance,
          }
+         //相對應的key 
+        let translate = {
+          "UserName":"聯絡人姓名",
+          "UserEmail": "Email",
+          "UserPhone": "連絡電話",
+          "Date": "預計婚期",
+          "Scenes":"婚禮場地",
+          "Attendance":"參加人數",
+          "Line":"Line ID"
+        }
         console.log(template_params ,'template_params')
         for (let key in mustCheck_params) {
             if (mustCheck_params[key] === "") {
-                console.log(`Key: ${key} has empty value.`);
+              
+                console.log(`Key: ${translate[key]} has empty value.`);
+                Toastify({
+                  text: `${translate[key]} 尚未填寫.`,
+                  duration: 6000,
+                  destination: "https://github.com/apvarun/toastify-js",
+                  newWindow: true,
+                  close: true,
+                  gravity: "top", // `top` or `bottom`
+                  position: "left", // `left`, `center` or `right`
+                  stopOnFocus: true, // Prevents dismissing of toast on hover
+                  style: {
+                    background: "linear-gradient(to right, rgb(255, 95, 109), rgb(255, 195, 113))",
+                  },
+                  onClick: function(){} // Callback after click
+                }).showToast();
                 return
             }
           }  
@@ -196,9 +222,42 @@ submitBtn.addEventListener("click", processFormData);
         emailjs.init("GW5fMt_RXRxjeBdT9");
         var service_id = "service_x0pe893";
         var template_id = "template_2nbvo2s";
-        emailjs.send(service_id, template_id, template_params);
-        console.log("emailjs send");
-        alert("成功寄出預約表單囉")
+        // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send(service_id, template_id, template_params).then(function(response) {
+          Toastify({
+            text: "恭喜你填單完成，我們將於3個⼯作天內回覆，期待我們能夠⼀起打造屬於你們夢想的婚禮！",
+            duration: 6000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    }, function(error) {
+      Toastify({
+        text: error,
+        duration: 6000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, rgb(255, 95, 109), rgb(255, 195, 113))",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    });
+        // console.log("emailjs send");
+        // alert("成功寄出預約表單囉")
+       
         
 }
 
