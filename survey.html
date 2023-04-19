@@ -34,8 +34,6 @@
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <!-- 加上這段標籤跟沒加的道理是一樣的，等於搜尋引擎將正常索引及檢索，指定 -1 代表網頁摘要長度不限 結束 -->
   <link rel="canonical" href="http://dctwedding.com/survey" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="預約戶外婚禮，諮詢婚禮顧問｜DCT Wedding 拾夢西式婚禮" />
@@ -117,76 +115,48 @@
       <div class="container">
         <form class="" name="form">
           <ul class="survyList form-row">
-            <li class="col-md-6 mb-4 mb-md-4 d-flex survyList-input">
+
+            <li class="col-md-6 mb-4 mb-md-4 survyList-input">
               <label for="surveyUserNameId" required="" class="sruveyside">
                 <div class="sruveyside-Title">聯絡人姓名</div>
                 <div class="sruveyside-TitleE">NAME</div>
-                <!-- <div>
-                  <div class="d-flex">
-                    聯絡人姓名
-                    <div class="text-danger">*</div>
-                  </div>
-                  <div class="sruveysideTitle">NAME</div>
-                </div> -->
               </label>
               <input placeholder="請輸入姓名" class="form-control" id="surveyUserNameId" name="surveyUserName" required="" type="text" value="" />
             </li>
-            <li class="col-md-6 mb-4 mb-md-4 d-flex survyList-input">
-              <label for="surveyUserPhoneId" required="" class="d-flex">
-                <div>
-                  <div class="d-flex">連絡電話
-                    <div class="text-danger">*</div>
-                  </div>
-                  <div class="sruveysideTitle">PHONE NO.</div>
-                </div>
+
+            <li class="col-md-6 mb-4 mb-md-4 survyList-input">
+              <label for="surveyUserPhoneId" required="" class="sruveyside">
+                <div class="sruveyside-Title">連絡電話</div>
+                <div class="sruveyside-TitleE">PHONE NO.</div>
               </label>
               <input class="form-control" id="surveyUserPhoneId" name="surveyUserPhone" required="" type="text"  value="" />
             </li>
-            <li class="col-md-6 mb-4 mb-md-4 d-flex align-items-center survyList-input">
-              <label for="surveyUserEmailId" required="" class="d-flex">
-                <div>
-                  <div class="d-flex">Email
-                    <div class="text-danger">*</div>
-                  </div>
-                </div>
+            <li class="col-md-6 mb-4 mb-md-4  survyList-input">
+              <label for="surveyUserEmailId" required="" class="sruveyside">
+                <div class="sruveyside-Title">Email</div>
               </label>
               <input class="form-control" id="surveyUserEmailId" name="surveyUserEmail" required="" type="email"  value="" />
             </li>
-            <li class="col-md-6 mb-4 mb-md-4 d-flex align-items-center survyList-input">
-              <label for="surveyUserLineId" required="" class="d-flex">
-                <div>
-                  <div class="d-flex">LINE ID
-                    <div class="text-danger">*</div>
-                  </div>
-                </div>
+            <li class="col-md-6 mb-4 mb-md-4  survyList-input">
+              <label for="surveyUserLineId" required="" class="sruveyside">
+                <div class="sruveyside-Title">LINE ID</div>
               </label>
               <input class="form-control" id="surveyUserLineId" name="surveyUserLine" required="" type="text"  value="" />
             </li>
-            <li class="col-md-6 mb-4 mb-md-4 d-flex align-items-center survyList-input">
-              <label for="surveyDateId" class="d-flex">
-                <div>
-                  <div class="d-flex">預計婚期
-                    <div class="text-danger">*</div>
-                  </div>
-                  <div class="sruveysideTitle">DATE</div>
-
-                </div>
+            <li class="col-md-6 mb-4 mb-md-4  survyList-input">
+              <label for="surveyDateId" class="sruveyside">
+                <div class="sruveyside-Title">預計婚期</div>
+                <div class="sruveyside-TitleE">DATE</div>
               </label>
               <input class="form-control" id="surveyDateId" name="surveyDate" required="" type="text" />
               <!-- placeholder="yyyy/mm/dd"
                 type="date" -->
 
             </li>
-            <li class="col-md-6 mb-4 mb-md-4 d-flex align-items-center survyList-input">
-              <label for="surveyScenesId">
-                <div>
-                  <div class="d-flex">
-                    婚禮場地
-                    <div class="text-danger">*</div>
-                  </div>
-                  <div class="sruveysideTitle">VENUE</div>
-                </div>
-
+            <li class="col-md-6 mb-4 mb-md-4  survyList-input">
+              <label for="surveyScenesId" class="sruveyside">
+                <div class="sruveyside-Title">婚禮場地</div>
+                <div class="sruveyside-TitleE">V-place</div>
               </label>
               <input class="form-control" id="surveyScenesId" name="surveyScenes" required="" />
 
@@ -202,7 +172,7 @@
                   <option value="無需證婚">無需證婚</option>
                 </select> -->
             </li>
-            <li class="col-md-12 mb-4 mb-md-4   d-flex align-items-center survyList-input">
+            <li class="col-md-12 mb-4 mb-md-4   d-flex align-items-center">
               <label for="surveyAttendanceId" class="d-flex">
                 <div>
                   <div class="d-flex">
@@ -367,8 +337,6 @@
                 <div>餐點形式 (可複選)</div>
                 <p class="sruveysideTitle">TYPE OF FOOD</p>
               </div>
-              <div class="inputflexStyle">
-
               <li>
                 <div class="custom-checkbox">
                   <input type="checkbox" name="mealForm" value="西式自助餐" id="mealForm1">
@@ -382,15 +350,13 @@
                 </div>
               </li>
               <li>
-                <div class="custom-checkbox survyList-input">
-                  <!-- <input type="checkbox" name="mealForm" value="其他" id="mealForm3"> -->
-                  <label for="mealForm3" class="ml-3">其他</label>
+                <div class="custom-checkbox">
+                  <input type="checkbox" name="mealForm" value="其他" id="mealForm3">
+                  <label for="mealForm3">其他</label>
                   <input id="mealFormOtherInput" name="mealForm" type="text" />
                 </div>
               </li>
             </div>
-          </div>
-
             <div class="col-md-12 mb-4 mb-md-4 d-flex">
               <div class="surveySelectTitle">
                 <div>宴客時間(可複選)</div>
@@ -465,7 +431,6 @@
                 <div>如何得知我們(可複選)</div>
                 <p class="sruveysideTitle">HOW DO YOU KNOW US</p>
               </div>
-            <div  class="inputflexStyle">
               <li>
                 <div class="custom-checkbox">
                   <input type="checkbox" name="surveyUserSourceId" value="親友介紹" id="surveyUserSourceId1">
@@ -491,24 +456,23 @@
                 </div>
               </li>
               <li>
-                <div class="custom-checkbox survyList-input">
-                  <!-- <input type="checkbox" name="surveyUserSourceId" value="廠商推薦" id="surveyUserSourceId5"> -->
-                  <label for="surveyUserSourceId5" class="ml-3">廠商推薦</label>
+                <div class="custom-checkbox">
+                  <input type="checkbox" name="surveyUserSourceId" value="廠商推薦" id="surveyUserSourceId5">
+                  <label for="surveyUserSourceId5">廠商推薦</label>
                   <input id="surveyUserSourceMRIdInput" name="surveyDate" type="text" />
                 </div>
               </li>
               <li>
-                <div class="custom-checkbox  survyList-input"">
-                  <label for="surveyUserSourceId6" class="ml-3">其他
-                  <!-- <input type="checkbox" name="surveyUserSourceId" value="其他" id="surveyUserSourceId6"> -->
+                <div class="custom-checkbox">
+                  <input type="checkbox" name="surveyUserSourceId" value="其他" id="surveyUserSourceId6">
+                  <label for="surveyUserSourceId6">其他
+
+
                   </label>
                   <input id="surveyUserSourceIdInput" name="surveyDate" type="text" />
                 </div>
               </li>
             </div>
-          </div>
-          <div>
-
             <!-- <li class="col-md-6 mb-4 mb-md-4">
                 <label for="surveyInvitationCardId">喜帖設計需求</label>
                 <select
@@ -633,7 +597,6 @@
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <!-- Your Chat Plugin code -->
   <div class="fb-customerchat" attribution="setup_tool" page_id="686068714820710" theme_color="#d4a88c"
