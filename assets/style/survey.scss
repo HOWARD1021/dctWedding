@@ -79,6 +79,10 @@
       &-input {
         display: flex;
         
+        .participants{
+          width: 35%;
+        }
+
         input::-webkit-input-placeholder {
           color: $light-gray;
           font-size: 10px;
@@ -120,6 +124,10 @@
             font-size: 8px;
           }
         }
+      }
+
+      &-other{
+        display: flex;
       }
 
       &-input label {
